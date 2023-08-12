@@ -3,13 +3,17 @@ package techproed.tests.day23_Annotation;
 import org.testng.annotations.*;
 
 public class C01_Annotation {
+    /*
+    BeforeSuite , test ve class en basta bir sefer ..AfterSuite, test ve class en son da bir sefer calisir
+    before ve after methodlar ise her testin basinda sonunda bir kez calisir
+     */
     @BeforeSuite
     public void suite(){
         System.out.println("Herşeyden önce bir kez BeforeSuite çalışır");
     }
     @BeforeTest
     public void beforeTest(){
-        System.out.println("Her testten önce bir kez çalışır");
+        System.out.println("Testlerden önce bir kez çalışır");
     }
     @BeforeClass
     public void beforeClass(){
@@ -40,7 +44,7 @@ public class C01_Annotation {
     }
     @AfterTest
     public void afterTest(){
-        System.out.println("Her testten sonra 1 kez çalışır");
+        System.out.println("Testlerden sonra 1 kez çalışır");
     }
     @AfterClass
     public void afterClass(){
